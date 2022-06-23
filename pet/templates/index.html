@@ -1,17 +1,57 @@
+
+<body>
 {% load static %}
-{% include 'navbar.html' %}
-
-
+{% include 'base.html' %}
 <div class="container">
   <div class="row">
-    <div class="col-md-6">
-      <h1><strong>Lorem Ipsum exceptur</strong></h1>
-      <h1><strong>ilpsum ommodi</strong></h1>
-      <h3>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</h3>
-      <button type="button" class="btn btn-success">Book appointment</button>
+
+    <div class="col-md-6" style="margin-top: 10%;text-align:justify;">
+      <div>
+        <h2><strong>Lorem Ipsum exceptur</strong></h2>
+        <h2><strong>ilpsum ommodi</strong></h2>
+      </div>
+
+      <div style="margin-top:5%; text-align:justify;">
+        <h5 >"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</h5>
+      </div>
     </div>
-    <div class="col-md-6">
-      <img src="{% static 'images/doc.png' %}" alt="vet" />
+
+      <div class="col-md-6 mt-5">
+        <img src="{% static 'images/doc.png' %}" alt="vet" class="img-responsive" width="100%"/>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <button type="button" class="btn btn-success">Book appointment</button>
+        </div>
+      </div>
+    </div>
+{% comment %} 
+    <div class="row">
+      <div class="col-md-6 mt-3 text-center">
+
+       <div class="col-md-2">
+        <h1>75</h1><h4>Clients</h4>
+        <div class="d-flex" style="height: 30px;">
+          <div class="vr bg-success p-1 text-dark bg-opacity-75"></div>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <h1>10+ </h1><h4>Veterinaries</h4>
+
+        <div class="d-flex" style="height: 30px; color:green;">
+          <div class="vr bg-success p-1 text-dark bg-opacity-75"></div>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <h1> 99% </h1><h4>Protection</h4>
+      </div>
     </div>
   </div>
+   {% endcomment %}
+
+
 </div>
+</body>

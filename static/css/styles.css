@@ -1,0 +1,19 @@
+body {
+  background-color: #F5F5F5;;
+}
+
+.vr {
+  border-right:6px #174624;
+  height:30px;
+}
+.btn{
+  background-color: #174624;
+}
+.navbar .navbar-nav .nav-link {
+  color: black;
+  font-size: 1.2em;
+}
+.navbar-brand {
+  font-family: 'Pacifico', cursive;
+  font-size: xx-large;
+}
