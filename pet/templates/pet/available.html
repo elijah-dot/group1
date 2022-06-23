@@ -1,6 +1,21 @@
-{%  for doctor in doctors %}
-
-{{doctor.name}}
 
 
-{% endfor %}
+<table>
+  <tr>
+{%  for vet in vets %}
+<td>
+  <img style="width:85px; height:85px; border-radius:50%" class="" src={{vet.image.url}} alt={{vet.name}}>
+</td>
+<td>
+{{vet.name}}
+</td>
+<td>
+  
+<a class="" href={% url 'booking' vet.id %}> Book </a>
+</td>
+
+
+
+  </tr>
+  {% endfor %}
+</table>

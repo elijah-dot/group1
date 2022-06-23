@@ -1,2 +1,13 @@
 
+
+<img style="height: 100px; width:100px; border-radius: 50%;" src={{vet.image.url}} alt={{vet.name}} >
+
+<h4> {{vet.name}} </h4>
+
+<form action="" method="post">
+  <h2> Appointment </h2>
+{% csrf_token %}
 {{form}}
+
+<button>Book</button>
+</post>

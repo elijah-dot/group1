@@ -1,0 +1,29 @@
+{% if appointments %}
+<table>
+{% for appointment in appointments %}
+<tr>
+<td>
+  {{appointment.vet}}
+</td>
+<td>
+  <p>
+ For: {{appointment.pet}}
+  </p>
+  <p>
+  Date: {{appointment.date|date:"M d"}}
+  </p>
+  <p>
+ Time: {{appointment.time_booked}}
+  </p>
+</td>
+<td>
+<a href="{% url 'delete_appointment' appointment.id %}"> <i class="fa fa-trash" aria-hidden="true"></i> j</a>
+</td>
+</tr>
+{% endfor %}
+</table>
+{% endif %}
+
+{% if message %}
+<h2>{{message}} </h2>
+{% endif %}

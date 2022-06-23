@@ -7,9 +7,11 @@ urlpatterns = [
 
 
 
-
+  path('appointments/',views.user_appointments, name='user_appointments'),
   path('book/',views.available, name='available'),
-  path('confirm/<drName>',views.booking, name='booking')
+  path('confirm/<vetName>',views.booking, name='booking'),
+  path('del/<appointment>',views.delete_appointment, name='delete_appointment'),
+
     
     
 ]

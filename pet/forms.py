@@ -1,6 +1,6 @@
 from django import forms
 from .models import *
-from .widgets import DatePickerInput, TimePickerInput, DateTimePickerInput
+from .widgets import DatePickerInput
 
 
 
@@ -121,8 +121,18 @@ from .widgets import DatePickerInput, TimePickerInput, DateTimePickerInput
 
 class AppointmentForm(forms.ModelForm):
 
-    date = forms.DateField(widget=DatePickerInput)
-    time_booked = forms.TimeField(widget=TimePickerInput)
+    years = range(datetime.now().year,datetime.now().year+1,1)
+    
+
+
+    date = forms.DateField(widget=forms.SelectDateWidget(years=years))
+    
     class Meta:
         model = Appointment
-        exclude = ['pet_owner','doctor']
+        exclude = ['vet']
+
+        labels = {
+            'time_booked':'pick a time',
+            'service': 'service',
+            'pet':'pet',
+        }

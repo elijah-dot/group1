@@ -4,3 +4,6 @@ from .models import *
 
 
 admin.site.register(Profle)
+admin.site.register(Pet)
+admin.site.register(Vet)
+
