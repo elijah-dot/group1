@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Pet Registration Form</title>
+  </head>
+  <body>
+
+  <form method="POST" class="post-form" >
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="save btn btn-default">Submit</button>
+
+  </form>
+
+  </body>
+
+</html>

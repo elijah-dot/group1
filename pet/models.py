@@ -11,7 +11,13 @@ OUR_ROLES =(
     ("Po","pet_owner")
 )
     
-
+OUR_PETS = (
+    ("Cat","cat"),
+    ("Dog","dog"),
+    ("Parrot","parrot"),
+    ("Rabbit","Rabbit"),
+    ("Guinea pig","guinea pig"),
+)
 
 class Profle(models.Model):
     name = models.CharField(max_length=255)
@@ -26,6 +32,7 @@ class Profle(models.Model):
 class Pet(models.Model):
     age = models.IntegerField()
     name = models.CharField(max_length=255)
+    kind = models.CharField(max_length=255, blank=True, choices=OUR_PETS)
     user = models.ForeignKey(User, blank=True, null=True, on_delete=models.CASCADE)
     
 class Appointment(models.Model):
